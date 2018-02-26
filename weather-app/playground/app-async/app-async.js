@@ -23,7 +23,7 @@ const argv = yargs
     .alias('help', 'h')
     .argv;
 
-var addressToSearchFor;
+let addressToSearchFor;
 
 if (argv.default) {
     // set default and exit

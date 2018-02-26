@@ -14,7 +14,7 @@ const saveLocations = (location) => {
 	fs.writeFileSync(fileName, JSON.stringify(location));
 }
 
-var addLocation = (location) => {
+let addLocation = (location) => {
 	const locationFetch = fetchLocation();
     var currentLocation = locationFetch.filter(l => l.location === location);
     if (currentLocation.length === 0) {        
@@ -24,7 +24,7 @@ var addLocation = (location) => {
     saveLocations(currentLocation);
 };
 
-var readLocation = () => {
+let readLocation = () => {
 	const currentLocation = fetchLocation();		
 	if (currentLocation.length === 1) {
 		return currentLocation[0];
